@@ -1,3 +1,5 @@
+import os
+
 class DevelopmentConfig:
     SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:Lima22Alpha@localhost/mechanic_db'
     DEBUG = True 
@@ -12,5 +14,6 @@ class TestingConfig:
     TESTING = True
     CACHE_DEFAULT_TIMEOUT = 300
 
-class prodconfig:
-    pass
+class ProductionConfig:
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI)
+    CACHE_TYPE = "SimpleCache"
