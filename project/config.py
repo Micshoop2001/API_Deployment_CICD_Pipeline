@@ -15,5 +15,5 @@ class TestingConfig:
     CACHE_DEFAULT_TIMEOUT = 300
 
 class ProductionConfig:
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI)
-    CACHE_TYPE = "SimpleCache"
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    CACHE_TYPE = 'SimpleCache'
